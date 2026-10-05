@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.urna {
+  display: flex;
+  background-color: #dbd5c9; /* Cor de plástico da urna */
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  gap: 30px;
+  width: 900px;
+  height: 500px;
+}
+
+/* --- ECRÃ --- */
+.tela {
+  flex: 1;
+  background-color: #f4f6f0; /* Fundo claro simulando o visor real */
+  border: 2px solid #a9a9a9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000; /* Força todo o texto a ser preto */
+}
+
+.tela-topo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tela-topo h3 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  color: #333;
+  font-weight: normal;
+}
+
+.tela-topo h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.tela-numeros {
+  display: flex;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.numero-caixa {
+  width: 40px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.pisca {
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.tela-informacoes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tela-informacoes p {
+  .tela-informacoes {
+  flex: 1;
+  display: flex;
+  flex-direction: row; /* Coloca o texto e a foto lado a lado */
+  justify-content: space-between; /* Empurra a foto para a direita */
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.info-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-texto p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.foto-candidato {
+  width: 110px;
+  height: 150px;
+  border: 2px solid #000;
+  object-fit: cover;
+  background-color: #ccc; /* Fundo cinza caso a foto demore a carregar */
+}
+}
+
+.voto-nulo h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  color: #000;
+  animation: piscar 1s infinite;
+}
+
+.tela-rodape {
+  color: #000;
+}
+
+.tela-rodape hr {
+  border: 1px solid #000;
+}
+
+/* --- TECLADO --- */
+.teclado-container {
+  background-color: #2b2b2b;
+  padding: 20px 30px;
+  border-radius: 5px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.teclado-numerico {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tecla {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.tecla:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.teclado-acoes {
+  display: flex;
+  gap: 10px;
+  height: 60px;
+}
+
+.btn-acao {
+  flex: 1;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+}
+
+.btn-acao:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.btn-branco { background-color: #fff; color: #000; }
+.btn-corrige { background-color: #f05454; color: #000; }
+.btn-confirma { background-color: #4caf50; color: #000; height: 80px; transform: translateY(-20px); }
+.btn-confirma:active { transform: translateY(-18px) translateX(2px); }
